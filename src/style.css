@@ -28,3 +28,15 @@ ul {
   border-radius: 5px;
   padding: 20px;
 }
+
+.weather-temp img {
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
+}
+
+.weather-temp strong {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+}
