@@ -11,16 +11,17 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="weather-app">
         <div class="weather-app-wrapper">
-          <h1>Victoria, BC</h1>
+          <h1 id="city"></h1>
           <ul>
             <li>Sunday 8:00pm</li>
-            <li>Cloudy</li>
+            <li id="condition"></li>
           </ul>
           <div class="row">
             <div class="col-6">
@@ -29,15 +30,14 @@
                   src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
                   alt="Cloudy"
                 />
-                <strong> 4</strong>
+                <strong id="current-temp"></strong>
                 ºC |<a href="#"> ºF</a>
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Percipitation: 73%</li>
-                <li>Humidity: 86%</li>
-                <li>Wind: 8 km/h</li>
+                <li>Humidity: <span id="humidity"> </span>%</li>
+                <li>Wind: <span id="wind"> </span> km/h</li>
               </ul>
             </div>
           </div>
