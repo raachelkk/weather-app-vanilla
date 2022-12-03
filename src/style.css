@@ -43,4 +43,15 @@ ul {
   font-size: 48px;
   font-weight: 400;
   line-height: 1;
+  margin-right: 5px;
+}
+
+.weather-temp .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temp .active:hover {
+  text-decoration: none;
 }
