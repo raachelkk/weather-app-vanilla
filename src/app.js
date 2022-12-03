@@ -37,9 +37,18 @@ function displayTemperature(response) {
   document.querySelector("#date").innerHTML = formatDate(
     response.data.time * 1000
   );
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+    );
+  document
+    .querySelector("#icon")
+    .setAttribute("alt", response.data.condition.description);
 }
 
-let city = "London";
+let city = "Lima";
 let apiKey = "82e2a506b3bf38ccef35bc49eo4bd3at";
 let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
