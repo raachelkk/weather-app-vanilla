@@ -48,8 +48,17 @@ function displayTemperature(response) {
     .setAttribute("alt", response.data.condition.description);
 }
 
-let city = "Lima";
-let apiKey = "82e2a506b3bf38ccef35bc49eo4bd3at";
-let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "82e2a506b3bf38ccef35bc49eo4bd3at";
+  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(url).then(displayTemperature);
+}
 
-axios.get(url).then(displayTemperature);
+function searchCity(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-search");
+  search(cityInput.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchCity);
