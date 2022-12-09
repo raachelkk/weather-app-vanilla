@@ -65,9 +65,9 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-function getForecast(coordinates) {
+function getForecast(city) {
   let apiKey = "82e2a506b3bf38ccef35bc49eo4bd3at";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -98,7 +98,7 @@ function displayTemperature(response) {
     .querySelector("#icon")
     .setAttribute("alt", response.data.condition.description);
 
-  getForecast(response.data.coordinates);
+  getForecast(response.data.city);
 }
 
 function search(city) {
