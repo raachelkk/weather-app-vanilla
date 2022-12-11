@@ -31,6 +31,11 @@ ul {
   padding: 0;
 }
 
+small a {
+  text-decoration: none;
+  color: #1e75c8;
+}
+
 .current-time {
   font-size: 20px;
   margin-bottom: 20px;
@@ -81,7 +86,7 @@ ul {
 
 .weather-app {
   max-width: 800px;
-  margin: 40px auto;
+  margin: 60px auto;
 }
 
 .weather-app-wrapper {
@@ -92,8 +97,6 @@ ul {
 }
 
 .weather-temp img {
-  height: 60px;
-  width: 60px;
   margin-right: 10px;
 }
 
