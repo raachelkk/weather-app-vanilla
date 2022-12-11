@@ -54,7 +54,7 @@ function displayForecast(response) {
                 <div class="forecast-max-min">
                   <span class="forecast-max">${Math.round(
                     forecastDay.temperature.maximum
-                  )}º</span
+                  )}º </span
                   ><span class="forecast-min">${Math.round(
                     forecastDay.temperature.minimum
                   )}º</span>
@@ -91,6 +91,8 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.time * 1000);
 
+  temperatureElement.style.fontsize = "100px";
+
   document
     .querySelector("#icon")
     .setAttribute(
@@ -100,6 +102,9 @@ function displayTemperature(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.condition.description);
+
+  document.querySelector("#icon").style.width = "100px";
+  document.querySelector("#icon").style.height = "100px";
 
   getForecast(response.data.city);
 }
