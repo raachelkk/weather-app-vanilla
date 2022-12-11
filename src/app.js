@@ -38,9 +38,10 @@ function displayForecast(response) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
-        `
-              <div class="col-2">
+        `     <div class="col-4">
                 <div class="forecast-day">${formatDay(forecastDay.time)}</div>
+              </div>
+              <div class="col-4">
                 <div class="forecast-icon">
                   <img
                     src="${forecastDay.condition.icon_url}"
@@ -48,6 +49,8 @@ function displayForecast(response) {
                     width="60px"
                   />
                 </div>
+              </div>
+              <div class="col-4">
                 <div class="forecast-max-min">
                   <span class="forecast-max">${Math.round(
                     forecastDay.temperature.maximum

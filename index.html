@@ -38,27 +38,28 @@
               </div>
             </div>
           </form>
-          <h1 id="city"></h1>
-          <ul>
-            <li><span id="date"></span></li>
-            <li id="condition"></li>
-          </ul>
           <div class="row weather-temp">
             <div class="col-6">
+              <h1 id="city"></h1>
+              <ul>
+                <li><span id="date"></span></li>
+                <li id="condition"></li>
+              </ul>
               <div class="d-flex">
                 <img src="#" alt="Cloudy" id="icon" />
                 <strong class="current-temp" id="current-temp"></strong>
                 <span class="unit-degrees"> ºC </span>
               </div>
-            </div>
-            <div class="col-6">
-              <ul>
-                <li>Humidity: <span id="humidity"> </span>%</li>
-                <li>Wind: <span id="wind"> </span> km/h</li>
+
+              <ul class="mt-4">
+                <li>Humidity <span id="humidity"> </span>%</li>
+                <li>Wind <span id="wind"> </span> km/h</li>
               </ul>
             </div>
+            <div class="col-6">
+              <div class="weather-forecast" id="weather-forecast"></div>
+            </div>
           </div>
-          <div class="weather-forecast" id="weather-forecast"></div>
         </div>
         <small>
           <a
