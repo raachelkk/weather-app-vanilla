@@ -17,7 +17,7 @@ h1 {
 
 li {
   list-style: none;
-  padding: 5px;
+  padding: 3px;
   color: #70757a;
   font-size: 16px;
 }
@@ -38,6 +38,11 @@ ul {
 
 .current-temp {
   margin-top: 20px;
+}
+
+.feels-like {
+  color: #000;
+  font-size: 16px;
 }
 
 .forecast-day {
